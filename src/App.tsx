@@ -1,10 +1,12 @@
-import { ListUsers } from './components/ListUsers';
+// import { ListUsers } from '@homework-task/components/ListUsers';
 import './styles.css';
+import { CreatePostForm } from './components/CreatePostForm';
 
 function App() {
     return (
-        <main className="container mx-auto p-4">
-            <ListUsers />
+        <main className="container mx-auto py-20">
+            {/* <ListUsers /> */}
+            <CreatePostForm />
         </main>
     );
 }

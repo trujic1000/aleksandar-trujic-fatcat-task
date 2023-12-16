@@ -89,6 +89,14 @@ const config = {
                 },
             },
         ],
+        '@typescript-eslint/no-misused-promises': [
+            2,
+            {
+                checksVoidReturn: {
+                    attributes: false,
+                },
+            },
+        ],
     },
 };
 

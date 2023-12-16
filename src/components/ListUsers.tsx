@@ -12,13 +12,13 @@ export const ListUsers = () => {
     }
 
     return (
-        <div>
+        <>
             <h2 className="mb-2 text-lg font-semibold text-black">Users:</h2>
             <div className="divide-y divide-gray-200">
                 {users.map((user) => (
                     <ul
                         key={user.id}
-                        className="max-w-md text-black list-none py-2"
+                        className="max-w-md text-black list-none py-4"
                     >
                         <li>
                             <strong>ID:</strong> {user.id}
@@ -35,6 +35,6 @@ export const ListUsers = () => {
                     </ul>
                 ))}
             </div>
-        </div>
+        </>
     );
 };
