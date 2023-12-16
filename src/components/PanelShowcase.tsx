@@ -1,6 +1,12 @@
 import clsx from 'clsx';
 
-export const PanelShowcase = ({ items }) => {
+import { Item } from '@homework-task/types';
+
+type Props = {
+    items: Item[];
+};
+
+export const PanelShowcase = ({ items }: Props) => {
     return (
         <div className={clsx('flex', 'justify-center', 'items-center')}>
             <div
