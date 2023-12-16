@@ -16,6 +16,7 @@ const config = {
         'plugin:import/recommended',
         'plugin:prettier/recommended',
         'prettier',
+        'plugin:@tanstack/eslint-plugin-query/recommended',
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs'],
     settings: {
