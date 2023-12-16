@@ -5,7 +5,7 @@ const config = {
     root: true,
     env: {
         browser: true,
-        es2020: true
+        es2020: true,
     },
     extends: [
         'eslint:recommended',
@@ -18,7 +18,7 @@ const config = {
         'prettier',
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs'],
-    settings: {react: {version: '18.2'}},
+    settings: { react: { version: '18.2' } },
     parser: '@typescript-eslint/parser',
     plugins: [
         'react-refresh',
@@ -28,14 +28,14 @@ const config = {
         'react-hooks',
         'unused-imports',
         'jsx-a11y',
-        'prettier'
+        'prettier',
     ],
     parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
-            jsx: true
-        }
+            jsx: true,
+        },
     },
     overrides: [
         {
@@ -44,7 +44,10 @@ const config = {
             ],
             files: ['*.ts', '*.tsx', '*.cjs', '*.mjs'],
             parserOptions: {
-                project: path.join(__dirname, 'tsconfig.json'),
+                project: [
+                    path.join(__dirname, 'tsconfig.json'),
+                    path.join(__dirname, 'tsconfig.node.json'),
+                ],
             },
         },
     ],
@@ -52,7 +55,7 @@ const config = {
         'react-refresh/only-export-components': [
             'warn',
             {
-                allowConstantExport: true
+                allowConstantExport: true,
             },
         ],
         'prettier/prettier': 'error',
@@ -81,6 +84,6 @@ const config = {
             },
         ],
     },
-}
+};
 
 module.exports = config;
