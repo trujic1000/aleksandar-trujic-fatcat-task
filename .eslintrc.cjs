@@ -18,7 +18,12 @@ const config = {
         'prettier',
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs'],
-    settings: { react: { version: '18.2' } },
+    settings: {
+        react: { version: '18.2' },
+        'import/resolver': {
+            typescript: {},
+        },
+    },
     parser: '@typescript-eslint/parser',
     plugins: [
         'react-refresh',
