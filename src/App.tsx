@@ -1,11 +1,12 @@
-import { useUsers } from './hooks/useUsers';
+import { ListUsers } from './components/ListUsers';
 import './styles.css';
 
 function App() {
-    const { status, data } = useUsers();
-    console.log('data', data);
-    console.log('status', status);
-    return <main></main>;
+    return (
+        <main className="container mx-auto p-4">
+            <ListUsers />
+        </main>
+    );
 }
 
 export default App;
