@@ -6,6 +6,7 @@ import { useForm, FieldValues, UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
 
 import { Alert } from './Alert';
+import { Button } from './Button';
 
 type CreateFormProps<
     TFormData extends FieldValues,
@@ -57,13 +58,7 @@ export function CreateForm<
     return (
         <form onSubmit={onSubmit} className="space-y-8">
             {renderForm(methods)}
-            <button
-                type="submit"
-                disabled={isPending}
-                className="rounded-full border-2 px-4 py-2 text-xs font-bold outline-none border-primary bg-primary text-white hover:bg-primary/80 hover:border-primary/80 disabled:bg-disabledDark disabled:border-disabledDark"
-            >
-                Submit
-            </button>
+            <Button disabled={isPending}>Submit</Button>
             {isSuccess && <Alert message={successMessage} />}
             {isError && (
                 <p>
