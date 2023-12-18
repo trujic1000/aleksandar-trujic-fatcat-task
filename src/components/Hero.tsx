@@ -1,8 +1,8 @@
 import { type Item } from '@homework-task/types';
 
-type Props = Omit<Item, 'description'>;
+export type HeroProps = Omit<Item, 'description'>;
 
-export const Hero = ({ title, image }: Props) => {
+export const Hero = ({ title, image }: HeroProps) => {
     return (
         <div className="flex row justify-center items-center gap-4 h-screen">
             <div className="w-4/12">

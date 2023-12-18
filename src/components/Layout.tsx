@@ -2,13 +2,10 @@ import React from 'react';
 
 import clsx from 'clsx';
 
-type Props = {
+export type LayoutProps = React.PropsWithChildren<{
     background: string;
-};
+}>;
 
-export const Layout = ({
-    children,
-    background,
-}: React.PropsWithChildren<Props>) => {
+export const Layout = ({ children, background }: LayoutProps) => {
     return <section className={clsx('py-20', background)}>{children}</section>;
 };

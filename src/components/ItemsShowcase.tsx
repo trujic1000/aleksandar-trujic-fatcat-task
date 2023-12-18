@@ -1,10 +1,10 @@
 import { Item } from '@homework-task/types';
 
-type Props = {
+export type ItemsShowcaseProps = {
     items: Omit<Item, 'image'>[];
 };
 
-export const ItemsShowcase = ({ items }: Props) => {
+export const ItemsShowcase = ({ items }: ItemsShowcaseProps) => {
     return (
         <div className="flex justify-center items-center">
             <div className="grid grid-cols-2 gap-8 w-8/12">
