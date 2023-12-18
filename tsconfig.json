@@ -27,6 +27,14 @@
             "@homework-task/*": ["./*"]
         }
     },
-    "include": ["src"],
+    "include": [
+        ".eslintrc.cjs",
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.cjs",
+        "**/*.mjs",
+        ".next/types/**/*.ts"
+    ],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
