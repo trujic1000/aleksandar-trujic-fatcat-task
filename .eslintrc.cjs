@@ -18,7 +18,7 @@ const config = {
         'prettier',
         'plugin:@tanstack/eslint-plugin-query/recommended',
     ],
-    ignorePatterns: ['dist', '.eslintrc.cjs'],
+    ignorePatterns: ['dist', '.eslintrc.cjs', '*.config.js'],
     settings: {
         react: { version: '18.2' },
         'import/resolver': {
